@@ -1,8 +1,10 @@
+'use strict'
+
 describe 'App', ->
 
   beforeEach ->
     setFixtures('<div id="todo-view"></div>')
-    App.initialize()
+    window.App.initialize()
 
   describe 'initialization', ->
 

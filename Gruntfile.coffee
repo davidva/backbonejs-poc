@@ -17,7 +17,7 @@ module.exports = (grunt) ->
           '<%= meta.specsGen %>': ['<%= meta.specs %>']
 
     jshint:
-      all: ['Gruntfile.js', '<%= meta.srcGen %>']
+      all: ['Gruntfile.js', '<%= meta.srcGen %>', '<%= meta.specsGen %>']
       options:
         jshintrc: '.jshintrc'
 
