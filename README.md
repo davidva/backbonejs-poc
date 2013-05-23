@@ -3,10 +3,6 @@ backbonejs-boilerplate
 
 Boilerplate for Backbone.js, CoffeeScript and Jasmine
 
-http://underscorejs.org/ 1.4.4
-http://jquery.com/ 1.9.1
-http://backbonejs.org/ 1.0.0
-
 How to build
 ------------
 
@@ -42,3 +38,11 @@ Execute the tests (includes Jasmine and JSHint):
 Start grunt to auto-build the project as you work:
 
     grunt watch
+
+Useful Links
+------------
+
+* http://underscorejs.org/
+* http://jquery.com/
+* http://backbonejs.org/
+* https://github.com/velesin/jasmine-jquery
