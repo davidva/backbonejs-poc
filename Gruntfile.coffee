@@ -12,8 +12,6 @@ module.exports = (grunt) ->
 
     coffee:
       compile:
-        options:
-          bare: true
         files:
           '<%= meta.srcGen %>': ['<%= meta.src %>']
           '<%= meta.specsGen %>': ['<%= meta.specs %>']
@@ -27,7 +25,7 @@ module.exports = (grunt) ->
       src: '<%= meta.srcGen %>'
       options:
         specs: '<%= meta.specsGen %>'
-        vendor: ['lib/underscore.js','lib/jquery-1.9.1.js','lib/backbone.js','lib/jasmine-jquery.js']
+        vendor: ['vendor/lib/underscore.js','vendor/lib/jquery-1.9.1.js','vendor/lib/backbone.js','specs/vendor/lib/jasmine-jquery.js']
 
     watch:
       test:

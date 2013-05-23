@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Backbone.js boilerplate</title>
-  <link rel="stylesheet" href="src/css/bootstrap.css">
-  <link rel="stylesheet" href="src/css/app.css">
-  <script src="lib/underscore.js"></script>
-  <script src="lib/jquery-1.9.1.js"></script>
-  <script src="lib/backbone.js"></script>
-  <script src="dist/app.js"></script>
+  <link rel="stylesheet" href="vendor/css/bootstrap.css">
+  <script src="vendor/lib/underscore.js"></script>
+  <script src="vendor/lib/jquery-1.9.1.js"></script>
+  <script src="vendor/lib/backbone.js"></script>
+  <script src="dist/backbone-boilerplate.js"></script>
 </head>
 <body>
   <h1>Backbone.js boilerplate</h1>
   <div id='todo-view'></div>
+  <script>
+    $(document).ready(function() {
+      App.initialize();
+    });
+  </script>
 </body>
 </html>

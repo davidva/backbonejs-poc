@@ -1,21 +1,27 @@
 'use strict'
 
-TodoItem = Backbone.Model.extend {}
+App =
+  Views:
+    Todo: Backbone.View.extend
+      template: _.template('<h3><%= description %></h3>')
+      initialize: ->
+        @render()
+      render: ->
+        attributes = @model.toJSON()
+        @$el.html(@template(attributes))
 
-TodoView = Backbone.View.extend
-  template: _.template('<h3><%= description %></h3>')
-  render: ->
-    attributes = @model.toJSON()
-    @$el.html(@template(attributes))
+  Models:
+    Todo: Backbone.Model.extend {}
 
-todoItem = new TodoItem
-  id: 1
-  description: 'Pick up milk'
-  status: 'incomplete'
+  initialize: ->
+    todoItem = new App.Models.Todo
+      id: 1
+      description: 'Pick up milk'
+      status: 'incomplete'
 
-todoView = new TodoView
-  id: 'todo-view'
-  model: todoItem
+    todoView = new App.Views.Todo
+      model: todoItem
 
-$ ->
-  todoView.render()
+    $('#todo-view').html(todoView.$el)
+
+window.App = App
